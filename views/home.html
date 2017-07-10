@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test App - Home</title>
+  <link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../styles/main_style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="../angular/app-controller.js"></script>
+</head>
+
+<body ng-app="test-app" ng-controller="ctrl">
+  <h1>NFL Arrest Data</h1>
+  
+  <span>Total offensive players arrested: {{oCount}}</span>
+  <span>Total defensive players arrested: {{dCount}}</span>
+  <span>Total special teams players arrested: {{sCount}}</span>
+  <br>
+
+  <table>
+    <th>Player Name</th>
+    <th>Team Name</th>
+    <th>Position</th>
+    <th>Arrest Count</th>
+    <tr ng-repeat="x in arrestData">
+      <td>{{x.Name}}</td>
+      <td>{{x.Team_name}}</td>
+      <td>{{x.Position}}</td>
+      <td>{{x.arrest_count}}</td>
+    </tr>
+  </table>
+
+</body>
+</html>
